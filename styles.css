@@ -1,0 +1,135 @@
+/* Reset default styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Set a background color and text color */
+body {
+  background-color: #f2f2f2;
+  color: #333;
+  font-family: Arial, sans-serif;
+}
+
+/* Style the header section */
+header {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 1rem 0;
+}
+
+/* Style the input section */
+#input-section {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  margin: 20px auto;
+  width: 80%;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+#expense-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+input[type="text"],
+input[type="number"],
+select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* Style the "Add" button */
+button[type="button"] {
+  border: none;
+  border-radius: 5px;
+  margin-top: 6px;
+  padding: 10px 20px;
+  cursor: pointer;
+  background-color: rgb(0, 0, 0);
+  color: #f2f2f2;
+  transition: background-color 0.3s; /* Add a smooth transition */
+}
+
+/* Change the "Add" button color to green on hover */
+button[type="button"]:hover {
+  background-color: rgb(47, 201, 47);
+  color: #333;
+}
+
+/* Style the "Delete All" button */
+#deleteAll {
+  border: none;
+  border-radius: 5px;
+  margin-top: 6px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s; /* Add a smooth transition */
+}
+
+/* Change the "Delete All" button color to red on hover */
+#deleteAll:hover {
+  background-color: rgb(209, 56, 56);
+  color: yellow;
+}
+
+
+/* Style the main content container */
+#main-container {
+  display: flex; /* Add flex display */
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  margin: 20px auto;
+  width: 80%;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Style the chart section */
+#chart-section {
+  flex: 1; /* Take up available space */
+  text-align: center;
+}
+
+/* Style the expensive items section */
+#expensive-items {
+  flex: 1; /* Take up available space */
+  margin-left: 20px; /* Add margin for spacing */
+}
+
+#expensive-items h2 {
+  font-size: 1.5rem;
+}
+
+/* Style the list of expensive items */
+#expensive-items-list {
+  list-style: none;
+}
+
+#expensive-items-list li {
+  padding: 5px 0;
+  border-bottom: 1px solid #ccc;
+}
+
+/* Responsiveness for mobile view */
+@media (max-width: 768px) {
+  #input-section,
+  #main-container {
+    width: 90%;
+  }
+
+  #main-container {
+    flex-direction: column; /* Stack items in mobile view */
+  }
+
+  #expensive-items {
+    margin-left: 0; /* Remove margin in mobile view */
+    margin-top: 20px;
+  }
+}

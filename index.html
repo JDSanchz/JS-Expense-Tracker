@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Expense Tracker</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>Expense Tracker</h1>
+  </header>
+
+  <section id="input-section">
+    <form id="expense-form">
+      <input type="text" id="name" placeholder="Name">
+      <input type="number" id="price" placeholder="Price">
+      <select id="category">
+        <option>School</option>
+        <option>Groceries</option>
+        <option>Eating Out</option>
+        <option>Health</option>
+        <option>Others</option>
+      </select>
+      <button type="button" onclick="addTransaction()">Add</button>
+    </form>
+    <button type="button" id="deleteAll" onclick="deleteAll()">Delete All</button>
+  </section>
+
+  <main id="main-container">
+    <section id="chart-section">
+        <div width="400" height="400" style="width: 400px; height: 400px;">
+        <canvas id="myPieChart" ></canvas>
+    </div>
+    </section>
+
+    <section id="expensive-items">
+      <h2>Top 5 Most Expensive Items</h2>
+      <ul id="expensive-items-list"></ul>
+    </section>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
